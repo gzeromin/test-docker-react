@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "start creating an image with dockerfile"
-  - docker build -t gzeromin/test-react -f Dockerfile.dev
+  - docker build -t gzeromin/test-react -f Dockerfile.dev ./
 
 script:
   - docker run -e CI=true gzeromin/test-react npm run test -- --coverage
